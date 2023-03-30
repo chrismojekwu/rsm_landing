@@ -1,0 +1,125 @@
+.getstarted-container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.getstarted-buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    width: 50%;
+}
+
+.getstarted-btn {
+    min-width: 50%;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: none;
+    padding: 5px 0;
+    transition: 0.5s;
+}
+
+.getstarted-btn-inner {
+    margin: 0 auto;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+    font-size: .7rem;
+}
+
+.getstarted-btn-inner:hover {
+    background-color: #bebebe;
+}
+
+.button-slide {
+    transform: translateY(-25%);
+    background-color: #000000;
+    color: white;
+}
+
+.getstarted {
+    display: grid;
+    grid-template-rows: 30px auto;
+    min-height: 250px;
+}
+
+.code-snippet-wrapper {
+    min-height: 50px;
+}
+
+.heading {
+    margin-top: 10px;
+}
+
+details > summary {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.code-snippet {
+    border: 2px solid #000000;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.code-snippet p:hover {
+    color: #ff7b00;
+    transition: 0.3s;
+}
+
+.code-snippet code > * {
+    margin-bottom: 10px;
+}
+
+.inputtypes > * , .styling > *, .gist > *, .configuration > * {
+    display: block;
+    margin: 5px 0 5px 0
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.cli {
+    color: #2fe02f;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 850px) {
+    .getstarted-container {
+        flex-direction: row;
+    }
+
+    .getstarted {
+        width: 80%;
+        align-self: flex-end;
+        margin-right: 10px;
+        z-index: 1;
+        background-color: #ffffff;
+    }
+
+    .getstarted-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+    }
+
+    .getstarted-btn-inner {
+        margin: 0;
+        min-width: fit-content;
+        width: 90%;
+        font-size: 1rem;
+    }
+    
+    .button-slide {
+        transform: translateX(5%);
+        background-color: #000000;
+    }
+}
