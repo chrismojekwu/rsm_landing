@@ -75,7 +75,36 @@ const App = () => {
                 </div>
                 <section className="form-container">
                     <div>
-                        <FormThree
+                        <h3>Form One</h3>
+                        <p className="landing-form-description">
+                            Form One supports a single form for a single file of any specified type.
+                        </p>
+                        <FormOne 
+                            fields={fields} 
+                            fileTypes={fileTypes} 
+                            cb={printData} 
+                            textConfig={testConfig}
+                            checkboxes={[
+                                {
+                                    query: "Languages", 
+                                    boxes: ["Basic", "C", "Java", "Ruby", "JS"]
+                                },
+                                {
+                                    query: "Skills", 
+                                    boxes: ["Frontend", "Backend", "Full-stack"]
+                                },
+                            ]}
+                            select={selectObjs}
+                            radios={radioObjs}
+                            fileSize={.5}
+                        />
+                    </div>
+                    <div>
+                        <h3>Form Two</h3>
+                        <p className="landing-form-description">
+                            Form Two supports a single form for a single file of each specified file type.
+                        </p>
+                        <FormTwo
                             fileTypes={formObj} 
                             cb={printData} 
                             textConfig={testConfig}
@@ -96,10 +125,12 @@ const App = () => {
                         />
                     </div>
                     <div>
-                        wowza
-                        {/*<FormOne 
-                            fields={fields} 
-                            fileTypes={fileTypes} 
+                        <h3>Form Three</h3>
+                        <p className="landing-form-description">
+                            Form Three supports mutliple files and produces a single form for each specfied file type.
+                        </p>
+                        <FormThree
+                            fileTypes={formObj} 
                             cb={printData} 
                             textConfig={testConfig}
                             checkboxes={[
@@ -114,8 +145,9 @@ const App = () => {
                             ]}
                             select={selectObjs}
                             radios={radioObjs}
-                            fileSize={.5}
-                        />*/}
+                            //fileSize={{pdf: 1, ics: .5, mp3: 3, jpg: 100}}
+                            //fileLimit={5}
+                        />
                     </div>       
                 </section>
                 <div className="landing-description">
